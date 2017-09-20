@@ -1,0 +1,5 @@
+scikit_image==0.13.0
+tensorflow_gpu==1.2.1
+numpy==1.11.0
+tflearn==0.3.2
+joblib==0.11
