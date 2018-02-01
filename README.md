@@ -1,12 +1,14 @@
 # Polar Transformer Networks #
 
-  Convolutional neural networks (CNNs) are equivariant with respect to translation; a translation in the input causes a translation in the output. Attempts to generalize equivariance have concentrated on rotations.
-  In this paper, we combine the idea of the spatial transformer, and the canonical coordinate representations of groups (polar transform) to realize a network that is invariant to translation, and equivariant to rotation and scale.
-  A conventional CNN is used to predict the origin of a polar transform.
-  The polar transform is performed in a differentiable way, similar to the Spatial Transformer Networks, and the resulting polar representation is fed into a second CNN.
-  The model is trained end-to-end with a classification loss.
-  We apply the method on variations of MNIST, obtained by perturbing it with clutter, translation, rotation, and scaling.
-  We achieve state of the art performance in the rotated MNIST, with fewer parameters and faster training time than previous methods, and we outperform all tested methods in the SIM2MNIST dataset, which we introduce.
+Convolutional neural networks (CNNs) are inherently equivariant to translation.
+Efforts to embed other forms of equivariance have concentrated solely on rotation.
+We expand the notion of equivariance in CNNs through the  Polar Transformer Network (PTN).
+PTN combines ideas from the Spatial Transformer Network (STN) and canonical coordinate representations.
+The result is a network invariant to translation and equivariant to both rotation and scale.
+PTN is trained end-to-end and composed of three distinct stages: a polar origin predictor, the newly introduced polar transformer module and a classifier.
+PTN achieves state-of-the-art on rotated MNIST and the newly introduced SIM2MNIST dataset, an MNIST variation obtained by adding clutter and perturbing digits with translation, rotation and scaling.
+The ideas of PTN are extensible to 3D which we demonstrate through the Cylindrical Transformer Network.
+
 
 ## Demo ##
 
@@ -46,15 +48,16 @@ Test accuracy (with test time augmentation): 0.9909
 
 ## References ##
 
-Esteves, C., Allen-Blanchette, C., Zhou, X. and Daniilidis, K., 2017. Polar Transformer Networks. arXiv preprint arXiv:1709.01889. http://arxiv.org/abs/1709.01889v1
+Esteves, C., Allen-Blanchette, C., Zhou, X. and Daniilidis, K, "Polar Transformer Networks", International Conference on Learning Representations, ICLR 2018, https://openreview.net/pdf?id=HktRlUlAZ.
 
 ```bibtex
-@article{esteves2017polar,
-  title={Polar Transformer Networks},
-  author={Esteves, Carlos and Allen-Blanchette, Christine and Zhou, Xiaowei and Daniilidis, Kostas},
-  journal={arXiv preprint arXiv:1709.01889},
-  url = {http://arxiv.org/abs/1709.01889v1},
-  year={2017}
+@article{esteves2018polar,
+title={Polar Transformer Networks},
+author={Carlos Esteves, Christine Allen-Blanchette, Xiaowei Zhou, Kostas Daniilidis},
+journal={International Conference on Learning Representations},
+year={2018},
+url={https://openreview.net/forum?id=HktRlUlAZ},
+note={accepted as poster},
 }
 ```
 
