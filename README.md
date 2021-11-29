@@ -14,7 +14,7 @@ The ideas of PTN are extensible to 3D which we demonstrate through the Cylindric
 
 We provide a demo code for the paper, where we train and test the PTN-B+ and PTN-B++ variations on the rotated MNIST 12k dataset.
 
-Check requirements in requirements.txt
+Check requirements in requirements.txt. Our codebase has been tested on TensorFlow 1.15 but the dependency is commented out to silence GitHub's security warnings.
 
 The following code should
 
